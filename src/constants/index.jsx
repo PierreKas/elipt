@@ -135,20 +135,24 @@ export const features = [
 
 export const checklistItems = [
   {
-    title: "Déploiement personnalisé des solutions ELIPT",
-    description: "J'ai besoin d'une brieve description ici",
+    title: "Le Déploiement personnalisé des solutions ELIPT",
+    description:
+      "J'ai besoin d'une brieve description ici ou soit min tosha iyi",
   },
   {
-    title: "Formation à l’utilisation de nos logiciels",
-    description: "J'ai besoin d'une brieve description ici",
+    title: "La Formation à l’utilisation de nos logiciels",
+    description:
+      "J'ai besoin d'une brieve description ici ou soit min tosha iyi",
   },
   {
-    title: "Assistance technique continue",
-    description: "J'ai besoin d'une brieve description ici",
+    title: "L'Assistance technique continue",
+    description:
+      "J'ai besoin d'une brieve description ici ou soit min tosha iyi",
   },
   {
-    title: "Conseils en transformation digitale pour organisations",
-    description: "J'ai besoin d'une brieve description ici",
+    title: "Les Conseils en transformation digitale pour organisations",
+    description:
+      "J'ai besoin d'une brieve description ici ou soit min tosha iyi",
   },
 ];
 

@@ -3,14 +3,14 @@ import { teamMembers } from "../constants";
 
 const TeamMembers = () => {
   return (
-    <div className="mt-20 tracking-wide">
+    <div className="mt-10 tracking-wide">
       <div className="text-center">
-        <span className="bg-neutral-900 text-orange-500 rounded-full h06 text-sm font-medium px-2 py-1 uppercase">
+        <span className="bg-gradient-to-r from-blue-400 to-black text-white rounded-full text-sm font-medium px-2 py-1 uppercase border border-blue-400">
           Notre équipe
         </span>
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide">
+        <h2 className="text-xl sm:text-3xl lg:text-4xl mt-4 lg:mt-8 tracking-wide">
           Voici notre équipe travailleuse, ambit
-          <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-blue-400 to-black text-transparent bg-clip-text">
             {""}
             ieuse et multidisciplinaire
           </span>
