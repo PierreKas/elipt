@@ -1,4 +1,4 @@
-import { BotMessageSquare } from "lucide-react";
+import { BotMessageSquare, TelescopeIcon } from "lucide-react";
 import { BatteryCharging } from "lucide-react";
 import { Fingerprint } from "lucide-react";
 import { ShieldHalf } from "lucide-react";
@@ -13,8 +13,8 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
-  { label: "Features", href: "#features" },
-  { label: "Workflow", href: "#workflow" },
+  { label: "À propos", href: "#features" },
+  { label: "Servive & Expertise", href: "#workflow" },
   { label: "Pricing", href: "#pricing" },
   { label: "Testimonials", href: "#testimonials" },
 ];
@@ -60,63 +60,61 @@ export const testimonials = [
 
 export const features = [
   {
-    icon: <BotMessageSquare />,
-    text: "Drag-and-Drop Interface",
+    icon: <TelescopeIcon />,
+    text: "Eliel Paul Technologia (ELIPT)",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      "ELIPT est une entreprise technologique intégrée basée à Goma (RDC), spécialisée dans la conception, la production et la commercialisation de solutions numériques évolutives.",
+    description2:
+      "Avec une équipe jeune, ambitieuse et multidisciplinaire, nous développons des marques SaaS robustes et modulaires, pensées pour répondre aux défis réels des organisations, entreprises et la communauté",
   },
-  {
-    icon: <Fingerprint />,
-    text: "Multi-Platform Compatibility",
-    description:
-      "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
-  },
-  {
-    icon: <ShieldHalf />,
-    text: "Built-in Templates",
-    description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
-  },
-  {
-    icon: <BatteryCharging />,
-    text: "Real-Time Preview",
-    description:
-      "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
-  },
-  {
-    icon: <PlugZap />,
-    text: "Collaboration Tools",
-    description:
-      "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
-  },
-  {
-    icon: <GlobeLock />,
-    text: "Analytics Dashboard",
-    description:
-      "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
-  },
+  // {
+  //   icon: <Fingerprint />,
+  //   text: "Multi-Platform Compatibility",
+  //   description:
+  //     "Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.",
+  // },
+  // {
+  //   icon: <ShieldHalf />,
+  //   text: "Built-in Templates",
+  //   description:
+  //     "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+  // },
+  // {
+  //   icon: <BatteryCharging />,
+  //   text: "Real-Time Preview",
+  //   description:
+  //     "Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.",
+  // },
+  // {
+  //   icon: <PlugZap />,
+  //   text: "Collaboration Tools",
+  //   description:
+  //     "Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.",
+  // },
+  // {
+  //   icon: <GlobeLock />,
+  //   text: "Analytics Dashboard",
+  //   description:
+  //     "Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.",
+  // },
 ];
 
 export const checklistItems = [
   {
-    title: "Code merge made easy",
-    description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+    title: "Déploiement personnalisé des solutions ELIPT",
+    description: "J'ai besoin d'une brieve description ici",
   },
   {
-    title: "Review code without worry",
-    description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+    title: "Formation à l’utilisation de nos logiciels",
+    description: "J'ai besoin d'une brieve description ici",
   },
   {
-    title: "AI Assistance to reduce time",
-    description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+    title: "Assistance technique continue",
+    description: "J'ai besoin d'une brieve description ici",
   },
   {
-    title: "Share work in minutes",
-    description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+    title: "Conseils en transformation digitale pour organisations",
+    description: "J'ai besoin d'une brieve description ici",
   },
 ];
 

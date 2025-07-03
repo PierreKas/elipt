@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import FeartureSection from "./components/FeartureSection";
-import Workflow from "./components/Workflow";
+import AboutSection from "./components/AboutSection";
+import Workflow from "./components/ServiceExpertise";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
+import Product from "./components/ServiceExpertise";
+import ServiceExpertise from "./components/ServiceExpertise";
 const App = () => {
   return (
     <>
@@ -15,10 +17,10 @@ const App = () => {
           <HeroSection />
         </section>
         <section id="features">
-          <FeartureSection />
+          <AboutSection />
         </section>
         <section id="workflow">
-          <Workflow />
+          <ServiceExpertise />
         </section>
         <section id="pricing">
           <Pricing />

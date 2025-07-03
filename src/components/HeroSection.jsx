@@ -1,31 +1,38 @@
 import React from "react";
-import video1 from "../assets/video1.mp4";
-import video2 from "../assets/video2.mp4";
+import vid1 from "../assets/vid1.mp4";
+import vid3 from "../assets/vid3.mp4";
 const HeroSection = () => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        VirtualR build Technologies
+        Bienvenue chez
         <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
           {" "}
-          for developers
+          ELIPT
         </span>
       </h1>
       <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
-        Empower your creativity and bring your VR app ideas to life with our
-        intuitive development tools. Get started today and turn your imagination
-        into immersive reality!{" "}
+        Eliel Paul Technologia (ELIPT) est une entreprise technologique de
+        conception, production et commercialisation de solutions numériques
+        innovantes. Fondée avec la vision de transformer l’avenir à travers la
+        technologie, ELIPT développe des produits tech puissants destinés à
+        répondre aux besoins des organisations modernes, en Afrique et dans le
+        monde.{" "}
+      </p>
+      <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
+        Découvrez nos produits, nos solutions et notre vision pour un futur
+        numérique accessible à tous.{" "}
       </p>
       <div className="flex justify-center my-10">
         <a
-          href="#"
+          href="#features"
           className="bg-gradient-to-r from-orange-500 to-orange-800 px-4 py-3 mx-3 rounded-md"
         >
-          Start for free
+          Qui sommes-nous
         </a>
-        <a href="#" className="py-3 px-4 mx-3 rounded-md border">
+        <a href="#features" className="py-3 px-4 mx-3 rounded-md border">
           {" "}
-          Documentation
+          Contactez-nous
         </a>
       </div>
       <div className="flex mt-10 justify-center ">
@@ -35,7 +42,7 @@ const HeroSection = () => {
           muted
           className="rounded-lg w-1/2 border border-orange-700 shadow-orange-400 mx-2 my-4"
         >
-          <source src={video1} type="video/mp4" />
+          <source src={vid1} type="video/mp4" />
           Your browser doesn't support the video tag
         </video>
         <video
@@ -44,7 +51,7 @@ const HeroSection = () => {
           muted
           className="rounded-lg w-1/2 border border-orange-700 shadow-orange-400 mx-2 my-4"
         >
-          <source src={video2} type="video/mp4" />
+          <source src={vid3} type="video/mp4" />
           Your browser doesn't support the video tag
         </video>
       </div>

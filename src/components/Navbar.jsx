@@ -58,7 +58,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center flex-shrink-0">
               <img className="h-10 w-10 mr-2" src={logo} alt="logo" />
-              <span className=" text-xl tracking-tight">VirtualR</span>
+              <span className=" text-xl tracking-tight">ELIPT</span>
             </div>
             <ul className="hidden lg:flex ml-14 space-x-12">
               {navItems.map((item, index) => (
@@ -73,7 +73,7 @@ const Navbar = () => {
               ))}
             </ul>
 
-            {/* <div className="hidden lg:flex justify-center space-x-12 items-center">
+            <div className="hidden lg:flex justify-center space-x-12 items-center">
               <a href="#" className="py-2 px-3 border rounded-md">
                 {" Sign In"}
               </a>
@@ -83,7 +83,7 @@ const Navbar = () => {
               >
                 {"Create Account "}
               </a>
-            </div> */}
+            </div>
 
             <div className="lg:hidden md:flex flex-col justify-end">
               <button onClick={toggleDrawer}>
@@ -105,7 +105,7 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="lg:hidden  justify-center space-x-12 items-center">
+              {/* <div className="lg:hidden  justify-center space-x-12 items-center">
                 <a href="#" className="py-2 px-3 border rounded-md">
                   {" Sign In"}
                 </a>
@@ -115,7 +115,7 @@ const Navbar = () => {
                 >
                   {"Create Account "}
                 </a>
-              </div>
+              </div> */}
             </div>
           )}
         </div>
