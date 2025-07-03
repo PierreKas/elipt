@@ -198,8 +198,8 @@ const Navbar = () => {
                 {"Create Account "}
               </a>
             </div> */}
-            {/* <div className="hidden lg:flex justify-center items-center">
-              <button
+            <div className="hidden lg:flex justify-center items-center">
+              {/* <button
                 onClick={toggleTheme}
                 className="flex items-center justify-center w-12 h-12 rounded-full bg-white border border-blue-400 hover:bg-blue-50 transition-colors duration-200"
                 aria-label="Toggle theme"
@@ -209,13 +209,16 @@ const Navbar = () => {
                 ) : (
                   <Moon className="w-5 h-5 text-blue-400" />
                 )}
-              </button>
+              </button> */}
+              <a href="#contacts" className="py-2 px-3 border rounded-md">
+                {" Contact"}
+              </a>
             </div>
             <div className="lg:hidden md:flex flex-col justify-end">
               <button onClick={toggleDrawer} className="text-blue-400">
                 {mobileDrawerOpen ? <X /> : <Menu />}
               </button>
-            </div>*/}
+            </div>
           </div>
           {mobileDrawerOpen && (
             <div className="fixed right-0 z-20 bg-white w-full p-12 flex flex-col justify-center items-center lg:hidden">
