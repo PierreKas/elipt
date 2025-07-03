@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
-import codeImage from "../assets/code.jpg";
+import techSupport from "../assets/tech-support.jpg";
 import { checklistItems } from "../constants";
 const ServiceExpertise = () => {
   return (
@@ -17,7 +17,7 @@ const ServiceExpertise = () => {
       </div>
       <div className="flex flex-wrap justify-center">
         <div className="p-2 w-full lg:w-1/2">
-          <img src={codeImage} alt="code" />
+          <img src={techSupport} alt="code" />
         </div>
         <div className="pt-12 w-full lg:w-1/2">
           {checklistItems.map((item, index) => (

@@ -2,31 +2,33 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
-import Workflow from "./components/ServiceExpertise";
-import Pricing from "./components/Pricing";
-import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
-import Product from "./components/ServiceExpertise";
 import ServiceExpertise from "./components/ServiceExpertise";
+import ContactAndLocation from "./components/Contact";
+import Produits from "./components/Produits";
+import TeamMembers from "./components/TeamMembers";
 const App = () => {
   return (
     <>
       <Navbar />
       <div className="pt-16">
-        <section id="hero">
+        <section id="home">
           <HeroSection />
         </section>
-        <section id="features">
+        <section id="about">
           <AboutSection />
         </section>
-        <section id="workflow">
+        <section id="products">
+          <Produits />
+        </section>
+        <section id="services">
           <ServiceExpertise />
         </section>
-        <section id="pricing">
-          <Pricing />
+        <section id="contacts">
+          <ContactAndLocation />
         </section>
-        <section id="testimonials">
-          <Testimonials />
+        <section>
+          <TeamMembers />
         </section>
       </div>
       <Footer />
