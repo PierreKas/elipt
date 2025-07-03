@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <div>
+      <div className="pt-16">
         <section id="hero">
           <HeroSection />
         </section>
