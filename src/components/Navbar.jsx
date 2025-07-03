@@ -7,6 +7,50 @@ const Navbar = () => {
   const toggleDrawer = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    setMobileDrawerOpen(false);
+
+    if (href.startsWith("/")) {
+      // Navigate to route
+      navigate(href);
+    } else if (href.startsWith("#")) {
+      // Smooth scroll
+      const target = document.querySelector(href);
+      if (target) {
+        const offset =
+          target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+      } else if (href === "#hero") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+  const handleSmoothScroll = (e, href) => {
+    e.preventDefault();
+
+    if (href === "#hero") {
+      // Scroll to top for home
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Scroll to specific section
+      const element = document.querySelector(href);
+      if (element) {
+        const navbarHeight = 80; // Adjust based on your navbar height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - navbarHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+
+    // Close mobile drawer after clicking
+    setMobileDrawerOpen(false);
+  };
   return (
     <div>
       <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
@@ -19,7 +63,12 @@ const Navbar = () => {
             <ul className="hidden lg:flex ml-14 space-x-12">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <a href={item.href}>{item.label}</a>
+                  <a
+                    href={item.href}
+                    onClick={(e) => handleSmoothScroll(e, item.href)}
+                  >
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -47,7 +96,12 @@ const Navbar = () => {
               <ul>
                 {navItems.map((item, index) => (
                   <li key={index} className="py-4">
-                    <a href={item.href}>{item.label}</a>
+                    <a
+                      href={item.href}
+                      onClick={(e) => handleSmoothScroll(e, item.href)}
+                    >
+                      {item.label}
+                    </a>
                   </li>
                 ))}
               </ul>
