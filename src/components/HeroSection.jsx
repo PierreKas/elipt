@@ -2,6 +2,28 @@ import React from "react";
 import vid1 from "../assets/vid1.mp4";
 import vid3 from "../assets/vid3.mp4";
 const HeroSection = () => {
+  const handleSmoothScroll = (e, href) => {
+    e.preventDefault();
+
+    if (href === "#hero") {
+      // Scroll to top for home
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Scroll to specific section
+      const element = document.querySelector(href);
+      if (element) {
+        const navbarHeight = 80; // Adjust based on your navbar height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - navbarHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
@@ -25,12 +47,17 @@ const HeroSection = () => {
       </p>
       <div className="flex justify-center my-10">
         <a
-          href="#features"
+          href="#about"
+          onClick={(e) => handleSmoothScroll(e, "#about")}
           className="bg-gradient-to-r from-orange-500 to-orange-800 px-4 py-3 mx-3 rounded-md"
         >
           Qui sommes-nous
         </a>
-        <a href="#features" className="py-3 px-4 mx-3 rounded-md border">
+        <a
+          href="#contacts"
+          onClick={(e) => handleSmoothScroll(e, "#contacts")}
+          className="py-3 px-4 mx-3 rounded-md border"
+        >
           {" "}
           Contactez-nous
         </a>
