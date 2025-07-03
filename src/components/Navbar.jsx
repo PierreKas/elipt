@@ -164,7 +164,10 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 py-3 backdrop-blur-lg border-b border-black">
         <div className="container px-4 mx-auto relative text-sm">
           <div className="flex items-center justify-between">
-            <div className="flex items-center flex-shrink-0">
+            <div
+              onClick={(e) => handleSmoothScroll(e, "#home")}
+              className="flex items-center flex-shrink-0 cursor-pointer"
+            >
               <img className="h-10 w-10 mr-2" src={logo} alt="logo" />
               <span className="text-blue-400 text-xl tracking-tight">
                 ELIPT
@@ -195,7 +198,7 @@ const Navbar = () => {
                 {"Create Account "}
               </a>
             </div> */}
-            <div className="hidden lg:flex justify-center items-center">
+            {/* <div className="hidden lg:flex justify-center items-center">
               <button
                 onClick={toggleTheme}
                 className="flex items-center justify-center w-12 h-12 rounded-full bg-white border border-blue-400 hover:bg-blue-50 transition-colors duration-200"
@@ -212,7 +215,7 @@ const Navbar = () => {
               <button onClick={toggleDrawer} className="text-blue-400">
                 {mobileDrawerOpen ? <X /> : <Menu />}
               </button>
-            </div>
+            </div>*/}
           </div>
           {mobileDrawerOpen && (
             <div className="fixed right-0 z-20 bg-white w-full p-12 flex flex-col justify-center items-center lg:hidden">

@@ -182,7 +182,7 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row justify-center my-10 gap-4 w-full max-w-md">
           <a
             href="#products"
-            onClick={(e) => handleSmoothScroll(e, "#about")}
+            onClick={(e) => handleSmoothScroll(e, "#products")}
             className="bg-gradient-to-r from-blue-400 to-blue-600 px-6 py-3 rounded-md text-white text-center hover:from-blue-500 hover:to-blue-700 transition-all duration-200"
           >
             Nos produits
