@@ -72,7 +72,7 @@ const ServiceExpertise = () => {
           ))}
         </div>
       </div> */}
-      <div className="flex flex-wrap lg:flex-nowrap items-center justify-center lg:py-8 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap items-center justify-center lg:py-8 ">
         {/* Image Section */}
         <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
           <img
@@ -91,7 +91,7 @@ const ServiceExpertise = () => {
               </div>
               <div className="ml-4">
                 <h5 className="text-lg  text-black">{item.title}</h5>
-                <p className="text-blue-400">{item.description}</p>
+                {/* <p className="text-blue-400">{item.description}</p> */}
               </div>
             </div>
           ))}
