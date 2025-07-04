@@ -147,7 +147,7 @@ const HeroSection = () => {
   //   </div>
   // );
   return (
-    <div className="bg-blue-100">
+    <div className="bg-blue-100 dark:bg-black dark">
       <div className="flex py-6 lg:py-20 bg-blue-100 flex-col items-center px-4">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
           Bienvenue chez

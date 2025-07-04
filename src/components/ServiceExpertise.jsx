@@ -72,7 +72,7 @@ const ServiceExpertise = () => {
           ))}
         </div>
       </div> */}
-      <div className="flex flex-wrap lg:flex-nowrap items-center justify-center lg:py-8 ">
+      <div className="flex flex-wrap lg:flex-nowrap items-center justify-center lg:py-8 px-4">
         {/* Image Section */}
         <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
           <img

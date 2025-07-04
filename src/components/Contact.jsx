@@ -161,10 +161,10 @@ const ContactAndLocation = () => {
                   </h4>
                   <div className="space-y-2 ml-7">
                     <a
-                      href="mailto:contact@elipt.tech"
+                      href="mailto:infoelipt@gmailcom"
                       className="block text-blue-400 hover:text-blue-800 transition-colors"
                     >
-                      contact@elipt.tech
+                      infoelipt@gmailcom
                     </a>
                   </div>
                 </div>
