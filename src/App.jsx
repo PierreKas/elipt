@@ -27,9 +27,9 @@ const App = () => {
         <section id="contacts">
           <ContactAndLocation />
         </section>
-        {/* <section>
+        <section>
           <TeamMembers />
-        </section> */}
+        </section>
       </div>
       <Footer />
     </>

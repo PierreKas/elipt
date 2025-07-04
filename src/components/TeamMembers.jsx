@@ -51,13 +51,13 @@ const TeamMembers = () => {
     >
       <div className="bg-zinc-100 p-2 dark:bg-zinc-600 rounded-xl">
         <button
-          onClick={() => setTheme("")}
+          // onClick={() => setTheme("")}
           className="bg-transparent hover:bg-zinc-200 p-3 dark:hover:bg-zinc-100/10 dark:text-white rounded-lg text-black"
         >
           <Sun />
         </button>
         <button
-          onClick={() => setTheme("dark")}
+          // onClick={() => setTheme("dark")}
           className="bg-transparent hover:bg-zinc-200 p-3 dark:hover:bg-zinc-100/10 dark:text-white rounded-lg text-black"
         >
           <Moon />
