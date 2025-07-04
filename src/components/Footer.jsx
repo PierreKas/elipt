@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div> */}
       <p className="text-center mt-10 font-bold">
-        © 2025 Eliel Paul Technology (ELIPT). Tout droits reservés.
+        © 2025 Eliel Paul Technologia (ELIPT). Tout droits reservés.
       </p>
     </footer>
   );
