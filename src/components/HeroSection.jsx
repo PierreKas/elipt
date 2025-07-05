@@ -54,7 +54,6 @@ const HeroSection = () => {
   return (
     <div
       data-theme={`${theme === "dark" ? "dark" : ""}`}
-      // data-theme={`${theme}`}
       className="bg-blue-100 dark:bg-zinc-600"
     >
       <div className="flex py-6 lg:py-20 bg-blue-100 dark:bg-zinc-600  flex-col items-center px-4">

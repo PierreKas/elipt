@@ -105,9 +105,6 @@ const Navbar = () => {
                   </button>
                 </div>
               </div>
-              {/* <a href="#contacts" className="py-2 px-3 border rounded-md">
-                {" Contact"}
-              </a> */}
             </div>
             <div className="lg:hidden md:flex flex-col justify-end">
               <button onClick={toggleDrawer} className="text-blue-400">
@@ -130,17 +127,24 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              {/* <div className="lg:hidden  justify-center space-x-12 items-center">
-                <a href="#" className="py-2 px-3 border rounded-md">
-                  {" Sign In"}
-                </a>
-                <a
-                  href="#"
-                  className="bg-gradient-to-r from-orange-500 to-orange-800 px-2 py-3 rounded-md"
-                >
-                  {"Create Account "}
-                </a>
-              </div> */}
+              <div className="lg:hidden  justify-center space-x-12 items-center">
+                <div>
+                  <div className="bg-zinc-100  dark:bg-zinc-600 rounded-xl">
+                    <button
+                      onClick={() => chooseLightMode()}
+                      className="bg-transparent hover:bg-zinc-200 p-3 dark:hover:bg-zinc-100/10 dark:text-white rounded-lg text-black"
+                    >
+                      <Sun />
+                    </button>
+                    <button
+                      onClick={() => chooseDarkMode()}
+                      className="bg-transparent hover:bg-zinc-200 p-3 dark:hover:bg-zinc-100/10 dark:text-white rounded-lg text-black"
+                    >
+                      <Moon />
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
