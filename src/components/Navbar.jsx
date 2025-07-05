@@ -5,28 +5,32 @@ import { navItems } from "../constants/index.jsx";
 import {} from "lucide-react";
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [theme, setTheme] = useState("");
+  const chooseDarkMode = () => {
+    setTheme("dark");
+    localStorage.setItem("currentTheme", "dark");
+    window.dispatchEvent(new CustomEvent("themeChanged", { detail: "dark" }));
+  };
+  const chooseLightMode = () => {
+    setTheme("light");
+    localStorage.setItem("currentTheme", "light");
+    window.dispatchEvent(new CustomEvent("themeChanged", { detail: "light" }));
+  };
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("currentTheme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      console.log(`Theme successfully fetched in nav bar ${savedTheme}`);
+    }
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("currentTheme", theme);
+    console.log(`Theme saved in nav bar ${theme}`);
+  }, [theme]);
   const toggleDrawer = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
-  const handleNavClick = (e, href) => {
-    e.preventDefault();
-    setMobileDrawerOpen(false);
 
-    if (href.startsWith("/")) {
-      // Navigate to route
-      navigate(href);
-    } else if (href.startsWith("#")) {
-      // Smooth scroll
-      const target = document.querySelector(href);
-      if (target) {
-        const offset =
-          target.getBoundingClientRect().top + window.pageYOffset - 80;
-        window.scrollTo({ top: offset, behavior: "smooth" });
-      } else if (href === "#hero") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    }
-  };
   const handleSmoothScroll = (e, href) => {
     e.preventDefault();
 
@@ -52,116 +56,13 @@ const Navbar = () => {
     // Close mobile drawer after clicking
     setMobileDrawerOpen(false);
   };
-  const [isDark, setIsDark] = useState(true); // Default to dark mode based on your design
 
-  useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setIsDark(savedTheme === "dark");
-      document.documentElement.classList.toggle("dark", savedTheme === "dark");
-    } else {
-      // Default to dark mode
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-
-    // Update localStorage
-    localStorage.setItem("theme", newTheme ? "dark" : "light");
-
-    // Update document class
-    document.documentElement.classList.toggle("dark", newTheme);
-  };
-  // return (
-  //   <div>
-  //     <nav className="fixed  top-0 left-0 right-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-  //       <div className="container px-4 mx-auto relative text-sm">
-  //         <div className="flex items-center justify-between">
-  //           <div className="flex items-center flex-shrink-0">
-  //             <img className="h-10 w-10 mr-2" src={logo} alt="logo" />
-  //             <span className=" text-xl tracking-tight">ELIPT</span>
-  //           </div>
-  //           <ul className="hidden lg:flex ml-14 space-x-12">
-  //             {navItems.map((item, index) => (
-  //               <li key={index}>
-  //                 <a
-  //                   href={item.href}
-  //                   onClick={(e) => handleSmoothScroll(e, item.href)}
-  //                 >
-  //                   {item.label}
-  //                 </a>
-  //               </li>
-  //             ))}
-  //           </ul>
-
-  //           {/* <div className="hidden lg:flex justify-center space-x-12 items-center">
-  //             <a href="#" className="py-2 px-3 border rounded-md">
-  //               {" Sign In"}
-  //             </a>
-  //             <a
-  //               href="#"
-  //               className="bg-gradient-to-r from-orange-500 to-orange-800 px-2 py-3 rounded-md"
-  //             >
-  //               {"Create Account "}
-  //             </a>
-  //           </div> */}
-  //           <div className="hidden lg:flex justify-center items-center">
-  //             <button
-  //               onClick={toggleTheme}
-  //               className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-900 border border-neutral-700 hover:bg-neutral-800 transition-colors duration-200"
-  //               aria-label="Toggle theme"
-  //             >
-  //               {isDark ? (
-  //                 <Sun className="w-5 h-5 text-orange-500" />
-  //               ) : (
-  //                 <Moon className="w-5 h-5 text-orange-500" />
-  //               )}
-  //             </button>
-  //           </div>
-  //           <div className="lg:hidden md:flex flex-col justify-end">
-  //             <button onClick={toggleDrawer}>
-  //               {mobileDrawerOpen ? <X /> : <Menu />}
-  //             </button>
-  //           </div>
-  //         </div>
-  //         {mobileDrawerOpen && (
-  //           <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-  //             <ul>
-  //               {navItems.map((item, index) => (
-  //                 <li key={index} className="py-4">
-  //                   <a
-  //                     href={item.href}
-  //                     onClick={(e) => handleSmoothScroll(e, item.href)}
-  //                   >
-  //                     {item.label}
-  //                   </a>
-  //                 </li>
-  //               ))}
-  //             </ul>
-  //             {/* <div className="lg:hidden  justify-center space-x-12 items-center">
-  //               <a href="#" className="py-2 px-3 border rounded-md">
-  //                 {" Sign In"}
-  //               </a>
-  //               <a
-  //                 href="#"
-  //                 className="bg-gradient-to-r from-orange-500 to-orange-800 px-2 py-3 rounded-md"
-  //               >
-  //                 {"Create Account "}
-  //               </a>
-  //             </div> */}
-  //           </div>
-  //         )}
-  //       </div>
-  //     </nav>
-  //   </div>
-  // );
   return (
-    <div>
-      <nav className="fixed top-0 left-0 right-0 z-50 py-3 backdrop-blur-lg border-b border-black">
+    <div
+      data-theme={`${theme === "dark" ? "dark" : ""}`}
+      className="dark:bg-zinc-600"
+    >
+      <nav className="fixed dark:bg-zinc-600 top-0 left-0 right-0 z-50 py-3 backdrop-blur-lg border-b border-black">
         <div className="container px-4 mx-auto relative text-sm">
           <div className="flex items-center justify-between">
             <div
@@ -169,7 +70,7 @@ const Navbar = () => {
               className="flex items-center flex-shrink-0 cursor-pointer"
             >
               <img className="h-10 w-10 mr-2" src={logo} alt="logo" />
-              <span className="text-blue-400 text-xl tracking-tight">
+              <span className="dark:text-white text-blue-400 text-xl tracking-tight">
                 ELIPT
               </span>
             </div>
@@ -179,7 +80,7 @@ const Navbar = () => {
                   <a
                     href={item.href}
                     onClick={(e) => handleSmoothScroll(e, item.href)}
-                    className="text-blue-400 hover:text-black transition-colors duration-200"
+                    className="dark:text-white text-blue-400 hover:text-black dark:hover:text-blue-400 transition-colors duration-200"
                   >
                     {item.label}
                   </a>
@@ -187,32 +88,26 @@ const Navbar = () => {
               ))}
             </ul>
 
-            {/* <div className="hidden lg:flex justify-center space-x-12 items-center">
-              <a href="#" className="py-2 px-3 border rounded-md">
-                {" Sign In"}
-              </a>
-              <a
-                href="#"
-                className="bg-gradient-to-r from-orange-500 to-orange-800 px-2 py-3 rounded-md"
-              >
-                {"Create Account "}
-              </a>
-            </div> */}
             <div className="hidden lg:flex justify-center items-center">
-              {/* <button
-                onClick={toggleTheme}
-                className="flex items-center justify-center w-12 h-12 rounded-full bg-white border border-blue-400 hover:bg-blue-50 transition-colors duration-200"
-                aria-label="Toggle theme"
-              >
-                {isDark ? (
-                  <Sun className="w-5 h-5 text-blue-400" />
-                ) : (
-                  <Moon className="w-5 h-5 text-blue-400" />
-                )}
-              </button> */}
-              <a href="#contacts" className="py-2 px-3 border rounded-md">
+              <div>
+                <div className="bg-zinc-100  dark:bg-zinc-600 rounded-xl">
+                  <button
+                    onClick={() => chooseLightMode()}
+                    className="bg-transparent hover:bg-zinc-200 p-3 dark:hover:bg-zinc-100/10 dark:text-white rounded-lg text-black"
+                  >
+                    <Sun />
+                  </button>
+                  <button
+                    onClick={() => chooseDarkMode()}
+                    className="bg-transparent hover:bg-zinc-200 p-3 dark:hover:bg-zinc-100/10 dark:text-white rounded-lg text-black"
+                  >
+                    <Moon />
+                  </button>
+                </div>
+              </div>
+              {/* <a href="#contacts" className="py-2 px-3 border rounded-md">
                 {" Contact"}
-              </a>
+              </a> */}
             </div>
             <div className="lg:hidden md:flex flex-col justify-end">
               <button onClick={toggleDrawer} className="text-blue-400">
