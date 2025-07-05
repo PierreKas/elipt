@@ -113,14 +113,14 @@ const Navbar = () => {
             </div>
           </div>
           {mobileDrawerOpen && (
-            <div className="fixed right-0 z-20 bg-white w-full p-12 flex flex-col justify-center items-center lg:hidden">
+            <div className="fixed right-0 z-20 bg-white/95 dark:bg-zinc-400/90  w-full p-12 flex flex-col justify-center items-center lg:hidden">
               <ul>
                 {navItems.map((item, index) => (
                   <li key={index} className="py-4">
                     <a
                       href={item.href}
                       onClick={(e) => handleSmoothScroll(e, item.href)}
-                      className="text-blue-400 hover:text-blue-600 transition-colors duration-200"
+                      className="text-blue-400 dark:text-white  hover:text-blue-600 transition-colors duration-200"
                     >
                       {item.label}
                     </a>
